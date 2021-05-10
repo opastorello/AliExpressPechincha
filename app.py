@@ -5,12 +5,11 @@ from pyfiglet import Figlet
 from clint.textui import colored
 import random, os
 
-
 Graph = Figlet(font="slant")
 GraphRender = Graph.renderText("PechinhaBot")
 os.system("cls")
 print("%s" % (colored.cyan(GraphRender)))
-print(colored.cyan("Automatização de pechinha Aliexpress.\nNão me responsabilizo por possíveis Bloqueios.\nBy Nícolas Pastorello\n"))
+print(colored.cyan("Automatização de pechinha Aliexpress.\nNão me responsabilizo por possíveis Bloqueios.\nBy Nícolas Pastorello\n\nhttps://github.com/opastorello/AliExpressPechincha\n"))
 
 url = input(colored.yellow('Insira a url do pechinha: '))
 
