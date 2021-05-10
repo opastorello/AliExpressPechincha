@@ -26,6 +26,7 @@ class SeleniumAliAutomation:
 			user_agent = "Mozilla/5.0 (iPhone; U; CPU iPhone OS 3_0 like Mac OS X; en-us) AppleWebKit/528.18 (KHTML, like Gecko) Version/4.0 Mobile/7A341 Safari/528.16"
 			profile = webdriver.FirefoxProfile() 
 			profile.set_preference("general.useragent.override", user_agent)
+			profile.executable_path = r'./driver/geckodriver.exe'
 
 			self.browser = webdriver.Firefox(profile, options=firefox_options)
 			self.browser.set_window_size(360,640)
@@ -33,8 +34,6 @@ class SeleniumAliAutomation:
 
 			WebDriverWait(self.browser, 30).until(
 			EC.presence_of_element_located((By.XPATH, r"//span[contains(text(), 'Help your friend slash the price！')]"))).click()
-
-			#print(self.tipo_mensagem("alerta", u"Criando uma conta no Aliexpress"))
 
 			WebDriverWait(self.browser, 30).until(
 			EC.presence_of_element_located((By.XPATH, r"/html/body/div[1]/div/div[2]/div[1]/div/ul/li[1]/div"))).click()
@@ -55,7 +54,6 @@ class SeleniumAliAutomation:
 
 				WebDriverWait(self.browser, 30).until(
 				EC.presence_of_element_located((By.XPATH, r"//span[@id='ms-back']"))).click()
-				#print(self.tipo_mensagem("sucesso", u"Conta criada com sucesso."))
 
 				try:
 					WebDriverWait(self.browser, 30).until(
@@ -146,4 +144,3 @@ class SeleniumAliAutomation:
 
 	def finalizar(self):
 		self.browser.quit()
-		#print(self.tipo_mensagem("sucesso", u"Script foi finalizado."))
