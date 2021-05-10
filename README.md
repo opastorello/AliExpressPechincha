@@ -2,7 +2,7 @@
 Bot em Python e Selenium para ganhar no pechincha
 
 
-## Depentencias 
+## Dependências 
 
   ```sh
   pip install requirements.txt
