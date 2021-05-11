@@ -7,7 +7,7 @@ Bot em Python e Selenium para ganhar no pechincha
 2. Acesse o site do Python e baixe e instale o mesmo [https://www.python.org/downloads/](https://www.python.org/downloads/)
 3. Baixe o bot e execute o comando a baixo com o CMD na pasta do bot
   ```sh
-  pip install requirements.txt
+  pip install -r requirements.txt
   ```
 4. Clique em EXECUTAR.bat
 
